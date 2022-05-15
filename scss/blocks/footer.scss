@@ -1,0 +1,40 @@
+.footer {
+  background-color: $blue;
+  padding-top: 75px;
+  padding-bottom: 100px;
+  color: $white;
+
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $fontNunito;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-link {
+      font-weight: 500;
+      line-height: 19px;
+    }
+  }
+}

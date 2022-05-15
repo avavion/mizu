@@ -1,0 +1,34 @@
+.section-benefits__body {
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+  align-items: center;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.benefit {
+  gap: 20px;
+
+  &__title {
+    font-family: $fontNunito;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-family: $fontNunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $netural;
+  }
+}

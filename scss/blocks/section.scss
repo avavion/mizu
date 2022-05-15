@@ -1,0 +1,25 @@
+.section {
+  margin-bottom: 120px;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+
+    &__title {
+      font-family: $fontNunito;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+
+      &--black {
+        color: $black;
+      }
+
+      &--white {
+        color: $white;
+      }
+    }
+  }
+}

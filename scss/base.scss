@@ -1,0 +1,32 @@
+body {
+  font-family: $fontRubik;
+  font-size: $font-size;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: $container;
+  padding: 0 $container-offset;
+  margin: 0 auto;
+}
+
+.color--yellow {
+  color: $yellow;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
