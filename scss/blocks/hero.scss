@@ -12,6 +12,17 @@
   color: $white;
   position: relative;
 
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__links {
+    display: flex;
+    
+  }
+
   &__title {
     font-family: $fontNunito;
     font-weight: 700;

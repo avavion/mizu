@@ -30,4 +30,102 @@
   &__buttons {
     gap: 40px;
   }
+
+  .burger {
+    display: none;
+    gap: 6px;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    &__line {
+      width: 40px;
+      height: 3px;
+      background-color: $black;
+    }
+  }
+
+  @media screen and (max-width: $xl) {
+    &__nav {
+      gap: 0;
+    }
+    &-menu {
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width: $lg) {
+    &__buttons {
+      display: none;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    &__links {
+      display: none;
+    }
+
+    & .burger {
+      display: flex;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  z-index: -1;
+
+  .menu {
+    position: relative;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    min-height: 100vh;
+    max-width: 50vw;
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    transition: transform $animation-duration $animation-effect;
+
+    &__title {
+      font-size: 2.5em;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &__link {
+        font-size: 1.25em;
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+      }
+    }
+  }
+  &.active {
+    z-index: 10;
+  }
+  &.active .menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
 }

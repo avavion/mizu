@@ -1,7 +1,14 @@
 .section-form {
+  @media screen and (max-width: $sm) {
+    padding: 15px 0;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: $md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__image {
@@ -12,16 +19,26 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
   }
 
   &__body {
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: $md) {
+      min-height: 100vh;
+    }
+
     .wrapper {
-      width: 580px;
+      width: 100%;
+      max-width: 580px;
       display: flex;
       flex-direction: column;
     }
@@ -34,6 +51,14 @@
   .form {
     display: flex;
     flex-direction: column;
+
+    &__link {
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 40px;
+    }
     &__text {
       line-height: 24px;
     }
@@ -43,6 +68,10 @@
       align-items: center;
       justify-content: center;
       margin-top: 60px;
+
+      @media screen and (max-width: $sm) {
+        margin-top: 20px;
+      }
     }
   }
 }

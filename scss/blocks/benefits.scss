@@ -3,12 +3,25 @@
   flex-direction: row;
   gap: 130px;
   align-items: center;
+
+  @media screen and (max-width: $lg) {
+    flex-direction: column;
+    gap: 60px;
+  }
 }
 
 .benefits {
   display: flex;
   flex-direction: column;
   gap: 50px;
+
+  @media screen and (max-width: $lg) {
+    &__image,
+    &__image img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .benefit {

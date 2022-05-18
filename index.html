@@ -5,13 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/index.js" defer></script>
 
     <title>Главная страница MIZU</title>
   </head>
   <body>
+    <div class="mobile-menu" id="mobile">
+      <div class="menu">
+        <h3 class="menu__title">Меню</h3>
+
+        <ul class="list col">
+          <li class="list__item">
+            <a href="#" class="list__link"> О нас </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Стоимость </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Тренера </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Новости </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Контакты </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Регистрация </a>
+          </li>
+
+          <li class="list__item">
+            <a href="#" class="list__link"> Войти </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <header class="header" id="header">
       <div class="container">
         <nav class="header__nav">
@@ -26,7 +64,7 @@
             </a>
           </div>
 
-          <ul class="header-menu">
+          <ul class="header-menu header__links">
             <!-- Links -->
             <li class="header-menu__item">
               <a href="#about" class="header-menu__link">О нас</a>
@@ -69,6 +107,12 @@
             </li>
             <!-- /Buttons -->
           </ul>
+
+          <div class="burger">
+            <i class="burger__line"></i>
+            <i class="burger__line"></i>
+            <i class="burger__line"></i>
+          </div>
         </nav>
       </div>
     </header>
@@ -91,9 +135,11 @@
               среде, и освоение навыков плавания.
             </p>
 
-            <a href="#" class="hero__button button button--fill">
-              Записаться
-            </a>
+            <div class="hero__links">
+              <a href="#" class="hero__button button button--fill">
+                Записаться
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -172,9 +218,7 @@
 
     <section class="section section-map" id="map">
       <div class="map">
-        <div class="container">
-          
-        </div>
+        <div class="container"></div>
       </div>
     </section>
 

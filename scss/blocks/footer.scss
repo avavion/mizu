@@ -8,6 +8,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @media screen and (max-width: $lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+    }
+
+    @media screen and (max-width: $sm) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
 
   &__item {
