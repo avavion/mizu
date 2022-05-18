@@ -1,0 +1,47 @@
+.steps {
+  margin-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 150px;
+
+  @media screen and (max-width: $md) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__image {
+      width: auto;
+      height: auto;
+
+      margin-bottom: 50px;
+
+      @media screen and (max-width: $md) {
+        width: 150px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-family: $fontNunito;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $netural;
+    }
+  }
+}

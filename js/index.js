@@ -1,16 +1,25 @@
 const scrollOff = () => document.body.style.overflow = 'hidden';
 const scrollOn = () => document.body.style.overflow = '';
 
-const dropdown = (selector) => {
-    const parent = document.querySelector(selector);
+const dropdownInit = () => {
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    if (!parent) return false;
+    if (dropdowns.length) return false;
 
+    dropdowns.forEach((dropdown) => {
+        const items = dropdown.querySelector('.dropdown-item');
 
+        items.forEach((item) => {
+            item.addEventListener('click', ({ currentTarget }) => {
+                if (currentTarget.classList.contains('active')) {
+                    currentTarget.classList.remove('active');
+                } else {
+                    currentTarget.classList.add('active');
+                }
+            })
+        })
+    });
 }
-
-
-
 
 const burgerMenu = () => {
     const modal = document.getElementById('mobile');
@@ -43,6 +52,7 @@ const burgerMenu = () => {
 const init = () => {
     console.log('init();');
     burgerMenu();
+    dropdownInit();
     // dropdown();
 }
 

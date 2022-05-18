@@ -12,7 +12,7 @@
   font-size: $font-size;
   font-family: $fontRubik;
 
-  transition-property: background-color, color, border;
+  transition-property: background-color, color, border, opacity;
   transition-timing-function: $animation-effect;
   transition-duration: $animation-duration;
 
@@ -38,7 +38,8 @@
   background-color: $yellow;
   color: $white;
   &:hover {
-    color: $black;
+    // color: $black;
     // background-color: $white;
+    opacity: 0.9;
   }
 }

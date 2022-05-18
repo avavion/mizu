@@ -1,0 +1,32 @@
+.section-faq {
+  background-color: $blue;
+  padding: 160px 0;
+  width: 100%;
+
+  position: relative;
+
+  &:after,
+  &:before {
+    content: "";
+    min-height: 43px;
+    max-height: 43px;
+
+    position: absolute;
+
+    background-image: url("../assets/icons/wave.svg");
+
+    left: 0;
+    right: 0;
+
+    background-color: #fff;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    transform: rotate(180deg);
+    bottom: 0;
+  }
+}
