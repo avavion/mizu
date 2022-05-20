@@ -1,5 +1,8 @@
 .section {
   margin-bottom: 120px;
+  @media screen and (max-width: $sm) {
+    margin-bottom: 80px;
+  }
   &-header {
     display: flex;
     flex-direction: column;
@@ -8,7 +11,7 @@
 
     @media screen and (max-width: $sm) {
       margin-bottom: 30px;
-     }
+    }
 
     &__title {
       font-family: $fontNunito;
