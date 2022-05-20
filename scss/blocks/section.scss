@@ -6,12 +6,20 @@
     gap: 10px;
     margin-bottom: 60px;
 
+    @media screen and (max-width: $sm) {
+      margin-bottom: 30px;
+     }
+
     &__title {
       font-family: $fontNunito;
       font-style: normal;
       font-weight: 700;
       font-size: 36px;
       line-height: 49px;
+
+      @media screen and (max-width: $sm) {
+        font-size: 28px;
+      }
 
       &--black {
         color: $black;
@@ -20,6 +28,39 @@
       &--white {
         color: $white;
       }
+    }
+  }
+
+  &-waves {
+    background-color: $blue;
+    padding: 160px 0;
+    width: 100%;
+
+    position: relative;
+
+    &:after,
+    &:before {
+      content: "";
+      min-height: 43px;
+      max-height: 43px;
+
+      position: absolute;
+
+      background-image: url("../assets/icons/wave.svg");
+
+      left: 0;
+      right: 0;
+
+      background-color: #fff;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      transform: rotate(180deg);
+      bottom: 0;
     }
   }
 }

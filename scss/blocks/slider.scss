@@ -1,0 +1,83 @@
+.section-slider {
+  .items {
+    .item {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      color: #ffffff;
+
+      & img {
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width: $lg) {
+        flex-direction: column;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__title {
+        font-family: $fontNunito;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    margin-bottom: 80px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 40px;
+    }
+
+    .item {
+      width: 100%;
+      padding: 10px 0;
+      border-bottom: 5px solid #ffffff;
+
+      transition: border-color $animation-duration $animation-effect;
+
+      &__text {
+        color: #fff;
+        font-family: $fontNunito;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        transition: color $animation-duration $animation-effect;
+
+        @media screen and (max-width: $md) {
+          font-size: 16px;
+        }
+      }
+
+      &.active {
+        border-color: $yellow;
+
+        p {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
